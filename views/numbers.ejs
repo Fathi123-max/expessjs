@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="number">Number is <%= name %> : </label>
+        
+        <p style="margin: 0px; padding: 0px; background-color: brown; ">
+            <% for (let i = 0; i < numbers.length; i++) { %>
+                <%= numbers[i] %>
+            <% } %>
+         
+            <% if (name === "fa") { %>
+                <p style="color: black; background-color: red;">Hello <%= name %></p>
+            <% } else { %>
+                <p style="color: white; background-color: green;">Hello <%= name %></p>
+            <% } %> 
+        </p>
+        <input type="number" name="number" id="">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

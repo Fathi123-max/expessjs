@@ -54,3 +54,5 @@ yarn.lock
 
 # Miscellaneous
 .cache/
+
+.env

@@ -1,4 +1,4 @@
-require('dotenv').config();
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 
@@ -8,7 +8,7 @@ app.use(express.json());
 
 // Check if MongoDB URI is set
 if (!process.env.MONGODB_URI) {
-  console.error('ERROR: MONGODB_URI is not defined in .env file');
+  console.error("ERROR: MONGODB_URI is not defined in .env file");
   process.exit(1);
 }
 
@@ -23,13 +23,13 @@ mongoose
   });
 
 // Optional: Add MongoDB connection events
-const db = mongoose.connection;
-db.on('error', (err) => console.error('MongoDB connection error:', err));
-db.once('open', () => console.log('MongoDB connection established'));
+// const db = mongoose.connection;
+// db.on('error', (err) => console.error('MongoDB connection error:', err));
+// db.once('open', () => console.log('MongoDB connection established'));
 
 // Basic route to test the server
-app.get('/', (req, res) => {
-  res.send('Express server is running');
+app.get("/", (req, res) => {
+  res.send("Express server is running");
 });
 
 const PORT = process.env.PORT || 3000;
